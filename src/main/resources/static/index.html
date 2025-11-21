@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspektionsverwaltung</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/theme.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">Inspektionsverwaltung</h1>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/" class="nav-link active">Dashboard</a></li>
+                <li class="nav-item"><a href="/inspections.html" class="nav-link">Inspektionen</a></li>
+                <li class="nav-item"><a href="/checklists.html" class="nav-link">Checklisten</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h2>Dashboard</h2>
+            <p>Übersicht aller Aktivitäten</p>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card stat-card-planned">
+                <div class="stat-icon">📋</div>
+                <div class="stat-content">
+                    <h3 id="planned-count">0</h3>
+                    <p>Geplant</p>
+                </div>
+            </div>
+            <div class="stat-card stat-card-progress">
+                <div class="stat-icon">⏳</div>
+                <div class="stat-content">
+                    <h3 id="progress-count">0</h3>
+                    <p>In Bearbeitung</p>
+                </div>
+            </div>
+            <div class="stat-card stat-card-completed">
+                <div class="stat-icon">✅</div>
+                <div class="stat-content">
+                    <h3 id="completed-count">0</h3>
+                    <p>Abgeschlossen</p>
+                </div>
+            </div>
+            <div class="stat-card stat-card-total">
+                <div class="stat-icon">📊</div>
+                <div class="stat-content">
+                    <h3 id="total-count">0</h3>
+                    <p>Gesamt</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h3>Aktuelle Inspektionen</h3>
+                <a href="/inspections.html" class="btn btn-sm btn-primary">Alle anzeigen</a>
+            </div>
+            <div class="table-container">
+                <table class="data-table" id="recent-inspections-table">
+                    <thead>
+                        <tr>
+                            <th>Titel</th>
+                            <th>Anlage</th>
+                            <th>Datum</th>
+                            <th>Status</th>
+                            <th>Aktionen</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recent-inspections-body">
+                        <tr>
+                            <td colspan="5" class="loading">Lädt...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h3>Verfügbare Checklisten</h3>
+                <a href="/checklists.html" class="btn btn-sm btn-primary">Alle anzeigen</a>
+            </div>
+            <div class="table-container">
+                <table class="data-table" id="checklists-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Anlage</th>
+                            <th>Schritte</th>
+                            <th>Aktionen</th>
+                        </tr>
+                    </thead>
+                    <tbody id="checklists-body">
+                        <tr>
+                            <td colspan="4" class="loading">Lädt...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+       
+
+    </div>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
